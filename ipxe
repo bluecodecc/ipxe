@@ -1,0 +1,8 @@
+#!ipxe
+
+set repo hhttps://mirrors.cloud.tencent.com/almalinux/9.3/BaseOS/
+
+imgfree
+kernel ${repo}/x86_64/os/images/pxeboot/vmlinuz inst.repo=${repo}/x86_64/os/ ip=dhcp initrd=initrd.img inst.vnc
+initrd ${repo}/x86_64/os/images/pxeboot/initrd.img
+boot
